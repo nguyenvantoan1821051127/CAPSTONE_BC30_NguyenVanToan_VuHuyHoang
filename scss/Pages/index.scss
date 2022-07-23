@@ -1,0 +1,187 @@
+@import "../Base/base";
+@import "../Themes/variable";
+
+
+// @mixin  button-gradient ($bg,$pd,$b,$br,$fz,$fw,$c,$bg-hover,$c-hover)  {
+//     @include button ($bg,$pd,$b,$br,$fz,$fw,$c,$bg-hover,$c-hover);
+//     //thêm gradient vào
+    
+// }
+
+
+//nesting css trong scss
+.header {
+    padding: 15px;
+    background-color: $c1-bg-primary;
+    
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .logo {
+            a {
+                // font-size: $text-2xl;
+                // font-weight: $text-semiBold;
+                // color: $c1-text-primary;
+                @include text($text-2xl, $text-semiBold , $c1-text-primary);
+                // @include text();
+                text-decoration: none;
+            }
+        }
+
+        .navbar {
+            a {
+                text-decoration: none;
+                color: $c2-text-dark;
+                font-size: $text-base;
+                font-weight: $text-light;
+                margin-left: 20px;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    height: 3px;
+                    width: 100%;
+                    background-color: $c1-text-primary;
+                    position: absolute;
+                    left: 0;
+                    bottom: -3px;
+                    transform: scale(0, 1);
+                    transition: all 0.3s;
+                }
+
+                &:hover {
+                    color: $c1-text-primary;
+
+                    &::after {
+                        transform: scale(1, 1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.carousel {
+    background: url('../../img/product-header-bg.jpg');
+    background-size: 100%;
+    .container {
+        display: flex;
+        justify-content: space-around;
+        height: 800px;
+        align-items: center;
+        .title-cyber-phone {
+            h2 {
+                @include text($text-6xl, $text-bold , $c1-text-primary);
+            }
+
+            h3 {
+                @include text($text-xl, $text-semiBold , $c2-text-dark);
+            }
+
+            p {
+                margin: 15px 0;
+            }
+
+            .button-info {
+                .btn-info {
+                    // background: transparent;
+                    // padding: 10px 30px;
+                    // border: 2px solid #2a73dd;
+                    // border-radius: 5px;
+                    -webkit-box-shadow: 0 3px 6px #c9d8f4;
+                    box-shadow: 0 3px 6px #c9d8f4;
+                    // cursor: pointer;
+                    // font-size: 14px;
+                    // font-weight: 600;
+                    // color: #2a73dd;
+                    @include button(transparent,10px 30px ,2px solid #2a73dd , 5px,$text-base ,$text-semiBold ,$c1-text-primary ,$c2-bg-primary , #fff)
+
+                }
+                .btn-shop {
+                    @include button(linear-gradient(120deg, #60a4f4, #2a73dd),10px 30px ,2px solid transparent , 5px,$text-base ,$text-semiBold ,#fff ,#fff ,$c1-text-primary);
+                    box-shadow: 0 3px 6px #c9d8f4;
+                    transition: all 0.3;
+                }
+            }
+
+            
+        }
+
+        .img-phone {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+.products{
+    .container{
+        padding: 15px 0;
+        h2{
+            text-align: center;
+            @include text($text-2xl,$text-bold,$c2-text-dark);
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            .col{
+                width: calc(100% /3);
+                padding: 0 15px;
+
+                @for $i from 0 to 7{
+                    .item-#{$i} {
+                        animation:faceInDown ($i + 1)*0.5s;
+                    }
+                }
+                @media screen and(max-width:767px){
+                    width: 100%;
+                }
+                .card-item{
+                    box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
+                    //animation: faceInDown 1s;
+                    img{
+                        padding: 15px 0;
+                        width: 100%;
+                    }
+                    .card-body{
+                        padding: 0 15px;
+                        h2{
+                            @include text($text-base,$text-semiBold,$c2-text-dark);
+                            text-align: left;
+                        }
+                        .price{
+                            @include text($text-base,$text-bold,$c2-text-dark);
+                        }
+                        .desc{
+                            @include text($text-base,$text-bold,$c2-text-dark);
+                            font-size: initial;
+                        }
+                        .ratting{
+                            i{
+                                color:yellow;
+                            }
+                        }
+                    }
+                    .card-footer{
+                        .btn-buy{
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes faceInDown{
+    0%{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

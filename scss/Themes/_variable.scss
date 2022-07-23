@@ -1,0 +1,60 @@
+//Tạo biến 
+//color 
+// bg
+$c1-bg-primary: #f5f9fe;
+$c2-bg-primary: #2a73dd;
+//text
+$c1-text-primary: #2a73dd;
+$c2-text-dark: #000;
+//text (fontSize,fontWeight,color)
+$text-xs: 14px;
+$text-base: 16px;
+$text-md: 18px;
+$text-xl: 20px;
+$text-2xl: 22px;
+$text-3xl: 30px;
+$text-4xl: 40px;
+$text-5xl: 50px;
+$text-6xl: 60px;
+
+//fontweight
+$text-thin: 100;
+$text-light: 300;
+$text-semiBold: 600;
+$text-bold: 900;
+
+$greens: ("100": "#00FF00", "200": "#00EE00", "300": "#00DD00");
+@each $number, $value in $greens {
+    .bg-green-#{$number}{
+        background-color:$value;
+    }
+    .text-green-#{$number}{
+        color:$value;
+    }
+}
+
+// -------------- mixin (hàm trong js) ------------------
+@mixin text($fz: $text-base, $fw: $text-light, $c: $c2-text-dark) {
+    // cho phép định nghĩa giá trị mặc định
+    font-size: $fz;
+    font-weight: $fw;
+    color: $c;
+}
+
+@mixin button ($bg,$pd,$b,$br,$fz,$fw,$c,$bg-hover,$c-hover) {
+    background: $bg;
+    padding: $pd;
+    border: $b;
+    border-radius: $br;
+    // -webkit-box-shadow: 0 3px 6px #c9d8f4;
+    // box-shadow: 0 3px 6px #c9d8f4;
+    cursor: pointer;
+    @include text($fz, $fw , $c);
+    // font-size: $fz;
+    // font-weight: $fw;
+    // color: $c;
+    &:hover{
+        background: $bg-hover;
+        color: $c-hover;
+    }
+}
