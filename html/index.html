@@ -8,7 +8,13 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Montserrat:ital,wght@0,100;0,200;0,600;1,100;1,200;1,500&family=Oswald:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link
       rel="stylesheet"
@@ -16,48 +22,235 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link href="../css/index.css" rel="stylesheet" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <div class="header top">
+        <div class="logo">
           <a href="#">
             <img src="../img/image 3.png" alt="..." />
           </a>
-          <div class="info">
-            <img src="../img/image 8.png" alt="" />
-            <p>(1)</p>
-            <a href="#">Login</a>
-            <a href="#">Register</a>
-          </div>
         </div>
+        <nav class="navbar">
+          <div class="icon">
+            <img src="../img/image 8.png" alt="" />
+            <span>(1)</span>
+          </div>
+          <a href="#">Login</a>
+          <a href="#">Register</a>
+        </nav>
+      </div>
+    </header>
+    <section class="plan">
+      <div class="container">
         <nav>
-          <a href="#">Home</a>
+          <a href="#" class="home">Home</a>
           <a href="#">Men</a>
           <a href="#">Woman</a>
           <a href="#">Kid</a>
           <a href="#">Sport</a>
         </nav>
       </div>
-    </header>
+    </section>
     <section class="carousel">
-      <div class="row">
-        <div class="col">
-          <div class="item">
-            <img src="../img/image 4.png" alt="" />
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="item">
+              <img src="../img/image 4.png" alt="" />
+            </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="item">
-            <h1>Product name</h1>
-            <p>product description ...</p>
-            <button>Buy now</button>
+          <div class="col" style="margin-left: 145px">
+            <div class="item">
+              <h1>Product name</h1>
+              <p>product description ...</p>
+              <button>Buy now</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="feature"></section>
-
+    <section class="feature">
+      <div class="container">
+        <hearder class="title">
+          <h1>-Product Feature-</h1>
+        </hearder>
+        <div class="main" id="tblProduct">
+          <!-- <div class="row">
+            <div class="col-4">
+              <div class="item">
+                <img src="../img/image 5.png" alt="..." />
+                <div class="info">
+                  <h3>Adidas Prophere</h3>
+                  <p>short descript ...</p>
+                </div>
+                <div class="content">
+                  <button>
+                    <a href="https://shop.cyberlearn.vn/api/Product?keyword=1"
+                      >Buy now</a
+                    >
+                  </button>
+                  <p>85$</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="item">
+                <img src="../img/image 5.png" alt="..." />
+                <div class="info">
+                  <h3>Adidas Prophere</h3>
+                  <p>short descript ...</p>
+                </div>
+                <div class="content">
+                  <button>
+                    <a href="https://shop.cyberlearn.vn/api/Product?keyword=1"
+                      >Buy now</a
+                    >
+                  </button>
+                  <p>85$</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="item">
+                <img src="../img/image 5.png" alt="..." />
+                <div class="info">
+                  <h3>Adidas Prophere</h3>
+                  <p>short descript ...</p>
+                </div>
+                <div class="content">
+                  <button>Buy now</button>
+                  <p>85$</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="item">
+                <img src="../img/image 5.png" alt="..." />
+                <div class="info">
+                  <h3>Adidas Prophere</h3>
+                  <p>short descript ...</p>
+                </div>
+                <div class="content">
+                  <button>Buy now</button>
+                  <p>85$</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="item">
+                <img src="../img/image 5.png" alt="..." />
+                <div class="info">
+                  <h3>Adidas Prophere</h3>
+                  <p>short descript ...</p>
+                </div>
+                <div class="content">
+                  <button>Buy now</button>
+                  <p>85$</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="item">
+                <img src="../img/image 5.png" alt="..." />
+                <div class="info">
+                  <h3>Adidas Prophere</h3>
+                  <p>short descript ...</p>
+                </div>
+                <div class="content">
+                  <button>Buy now</button>
+                  <p>85$</p>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row-top">
+          <div class="row footer-container">
+            <div class="col col-md-4">
+              <div class="title">
+                <p>GET HELP</p>
+                <ul>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">Shopping</a></li>
+                  <li><a href="#">NIKEID</a></li>
+                  <li><a href="#">Nike++</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col col-md-4">
+              <div class="title">
+                <p>ORDERS</p>
+                <ul>
+                  <li><a href="#">Payment options</a></li>
+                  <li><a href="#">Shipping and delivery</a></li>
+                  <li><a href="#">Returns</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col col-md-4">
+              <div class="title">
+                <p>REGISTER</p>
+                <ul>
+                  <li>
+                    <a href="#"
+                      >Create one account to manage everything you do with Nike,
+                      from your shopping prefrrences to your Nike+ activity.</a
+                    >
+                  </li>
+                  <li><a class="text-red" href="#">Learn more</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row-bottom">
+          <div class="row footer-container">
+            <div class="col col-md-4">
+              <div class="title">
+                <p>EMAIL SIGN UP</p>
+                <ul>
+                  <li>
+                    <a href="#"
+                      >Be the first to know about new product and special
+                      offers.</a
+                    >
+                  </li>
+                  <li><a class="text-red" href="#">Sign up now</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col col-md-4">
+              <div class="title">
+                <p>GIFT CARDS</p>
+                <ul>
+                  <li><a href="#">Give the gift that always fits.</a></li>
+                  <li><a class="text-red" href="#">wiew cards</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col col-md-4">
+              <div class="title">
+                <p>REGISTER</p>
+                <ul>
+                  <li>
+                    <a href="#"
+                      >Locate a Nike retail store or authorized retailer</a
+                    >
+                  </li>
+                  <li><a class="text-red" href="#">Search</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
@@ -70,5 +263,7 @@
       integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
       crossorigin="anonymous"
     ></script>
+
+    <script type="module" src="../controllers/index.js"></script>
   </body>
 </html>
