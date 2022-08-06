@@ -157,11 +157,14 @@
                             margin-left: -28px;
                             padding: 18px 45px 18px 50px;
                             background-color: #E1B067;
-                            font-weight: 200;
-                            font-size: 24px;
-                            line-height: 29px;
-                            color: #000000;
                             border: none;
+                            a{
+                                text-decoration: none;
+                                font-weight: 200;
+                                font-size: 24px;
+                                line-height: 29px;
+                                color: #000000;
+                            }
                         }
                         p{
                             padding: 13px 86px 23px 59px;
@@ -180,26 +183,70 @@
             }
         }
     }
-    // .Product-Feature{
-    
-    //     .container{
-    //         padding-bottom: 50px;
-    //         background: $bg-color-primary;
-    //         .Product-Feature-inner{
-    //             background-color: $bg-color-primary;
-    //             h1{
-    //                 text-align: center;
-    //                 @include text ($fw-md,$fs-l,$lh-l);
-    //             }
-    //             #rendertable{
-    //                 .rendertable-item{
-    //                     .rendertable-item-inner{
-    //                         .rendertable-item-inner-bottom{
-    //                             text-align: center;
-    //                         }
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+.footer{
+    .footer-top{
+        background: #F8F8F8;
+        .container{
+            .row{
+                display: flex;
+                justify-content: space-around;
+                margin: 0px 100px;
+                padding: 20px 0px;
+                .col{
+                    width: calc(100% /3);
+                    .item{
+                        border-right: 1px solid #000;
+                        h3{
+                            font-size: 16px;
+                            font-weight: 700;
+                            color: #000000;
+                        }
+                        p{
+                            font-size: 12px;
+                            font-weight: 600;
+                            color: #000;
+                            margin-bottom: 3px;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        background: #DEDDDC;
+        .container{
+            .row{
+                display: flex;
+                justify-content: space-around;
+                margin: 0px 100px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                .col{
+                    .item{
+                        border-right: 1px solid #000;
+                        h3{
+                            font-size: 15px;
+                            font-weight: 700;
+                            color: #000000;
+                        }
+                        p{
+                            font-size: 12px;
+                            font-weight: 600;
+                            color: #000;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: red;
+                            font-size: 15px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

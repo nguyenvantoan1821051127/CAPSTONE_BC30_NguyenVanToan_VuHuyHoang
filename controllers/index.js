@@ -5,26 +5,26 @@ function getProduct(){
     });
 
     promise.then(function(result){
-        console.log(result.data.content)
+        console.log(result.data)
 
         renderProduct(result.data.content,'tblProduct');
     })
 }
 function renderProduct(arrPr,idBody){
     let htmlConect;
-    for(let index=0; index<arrPr.length; index++){
+    for(let index=0;index<arrPr.length;index++){
         let product=arrPr[index];
         htmlConect+=`
         <div class="col-4">
             <div class="item">
                 <img src="${product.image}" alt="...">
                 <div class="info">
-                    <h3>${product.alias}</h3>
+                    <h3>${product.name}</h3>
                     <p>${product.shortDescription}</p>
                 </div>
                 <div class="content">
-                    <a href="./detail.html?productid=${product.id}" class="btn-buyNow">Buy now</a>
-                    <span class="btn-gia">${product.price}$</span>
+                    <button><a href="./detail.html?productid=${product.id}">Buy now</a></button>
+                    <p >${product.price}$</p>
                 </div>
             </div>
         </div>`

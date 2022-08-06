@@ -1,0 +1,98 @@
+@import "../Base/base";
+@import "../Themes/variable";
+
+.header{
+    background-color:  #000;
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            a{
+                margin-left: -60px;
+                img{
+                    width: 116px;
+                }
+            }
+        }
+        .navbar{
+            .icon{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 31px;         
+                }
+                span{
+                    color: #fff;
+                    font-weight: 300;
+                    font-size: 30px;
+                    line-height: 36px;
+                }
+            }
+            a{
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 300;
+                color: #fff;
+                // line-height: 19px;
+                padding-left: 15px;
+            }
+        }
+    }
+}
+.plan{
+    .container{
+        nav{
+            margin-left: -60px;
+            a{
+                text-decoration: none;
+                font-weight: 300;
+                font-size: 20px;
+                color: #000000;
+                padding-right: 37px;
+                padding-top: 16px;
+                padding-bottom: 10px;
+            }
+            .home{
+                font-weight: 400;
+                font-size: 20px;
+                color: #000000;
+                // border-bottom: 1px solid #000000;
+                // padding-right: -10px;
+            }
+        }
+    }
+}
+.Register{
+    
+    .container{
+        background: $bg-color-4th ;
+        .register-inner{
+            margin: 0 auto;
+            padding: 40px;
+            max-width: 1000px;
+          
+            .title-register{
+                p{
+                    @include text($fw-md,$fs-l,$lh-l);
+                    padding-bottom: 50px;
+                }
+            }
+            // form{
+            //     .col{
+            //         .inputcol{
+            //             .input-top{
+            //                 div{
+            //                     input{
+            //                       background: red;
+                                    
+            //                     }
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
+        }
+    }
+}
