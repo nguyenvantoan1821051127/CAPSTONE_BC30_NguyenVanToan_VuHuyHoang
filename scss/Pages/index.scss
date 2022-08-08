@@ -68,7 +68,7 @@
     background-image: url(../../img/image\ 6.png);
     // background-position: center center;
     background-repeat: no-repeat;
-    background-size: 100% 100% ;
+    background-size: contain;
     margin-top: 102px;
     .container{
         .row{
@@ -83,7 +83,8 @@
                 .item{       
                           
                     img{
-                        width: 821px;
+                        width: 100%;
+                        
                     }
                     p{
                         font-weight: 300;
@@ -96,12 +97,15 @@
                         color: #000000;
                     }
                     button{
-                        font-weight: 300;
-                        font-size: 20px;
-                        color:#FFFFFF;
                         padding: 13px 35px;
                         background: #F8B653;
                         border: none;
+                        a{
+                            text-decoration: none;
+                            font-weight: 300;
+                            font-size: 20px;
+                            color:#FFFFFF;
+                        }
                     }
                 }
             }

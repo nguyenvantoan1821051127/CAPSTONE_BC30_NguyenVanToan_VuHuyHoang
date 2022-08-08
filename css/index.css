@@ -147,7 +147,7 @@ input :focus {
 .carousel {
   background-image: url(../../img/image\ 6.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: contain;
   margin-top: 102px;
 }
 .carousel .container .row {
@@ -162,7 +162,7 @@ input :focus {
   margin-top: -70px;
 }
 .carousel .container .row .col .item img {
-  width: 821px;
+  width: 100%;
 }
 .carousel .container .row .col .item p {
   font-weight: 300;
@@ -175,12 +175,15 @@ input :focus {
   color: #000000;
 }
 .carousel .container .row .col .item button {
-  font-weight: 300;
-  font-size: 20px;
-  color: #FFFFFF;
   padding: 13px 35px;
   background: #F8B653;
   border: none;
+}
+.carousel .container .row .col .item button a {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 20px;
+  color: #FFFFFF;
 }
 
 .feature .title h1 {
