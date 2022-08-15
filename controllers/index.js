@@ -56,7 +56,7 @@ function renderCarousel(arrPr,idBodycarousel,ibodyindicators){
                     </div>
                 </div>`
 
-            htmlIndicator+=`<button type="button"data-bs-target="#carouselExampleDark"data-bs-slide-to="0"class="active"aria-current="true"aria-label="Slide 1"></button>`
+            htmlIndicator+=`<button type="button"data-bs-target="#carouselExampleDark"data-bs-slide-to="0"class="icon active"aria-current="true"aria-label="Slide 1"></button>`
             }
         else{
             htmlCarousel+=`
@@ -77,7 +77,7 @@ function renderCarousel(arrPr,idBodycarousel,ibodyindicators){
                     </div>
                 </div>`
 
-                htmlIndicator+=`<button type="button"data-bs-target="#carouselExampleDark"data-bs-slide-to="${index}" aria-current="true"aria-label=Slide ${index+1}></button>`
+                htmlIndicator+=`<button type="button"data-bs-target="#carouselExampleDark"data-bs-slide-to="${index}" aria-current="true"aria-label=Slide ${index+1} class="icon"></button>`
         }
     }
     document.getElementById(idBodycarousel).innerHTML =  htmlIndicator;

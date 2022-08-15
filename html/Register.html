@@ -27,7 +27,7 @@
     <header class="header">
       <div class="container">
         <div class="logo">
-          <a href="#">
+          <a href="./index.html">
             <img src="../img/image 3.png" alt="..." />
           </a>
         </div>
@@ -37,7 +37,7 @@
             <span>(1)</span>
           </div>
           <a href="#">Login</a>
-          <a href="#">Register</a>
+          <a href="./Register.html">Register</a>
         </nav>
       </div>
     </header>
@@ -52,32 +52,36 @@
         </nav>
       </div>
     </section>
-    <section class="Register">
+    <section class="register">
       <div class="container">
-        <div class="register-inner">
-          <div class="title-register">
-            <p class="text-center">Register</p>
-          </div>
-          <form id="formUser" action="" class="row">
-            <div class="col col-md-6">
+        <h1>Register</h1>
+        <form class="form row" id="btnFrom">
+          <div class="col-6">
+            <div class="item">
               <div class="inputcol input-email col">
-                <div class="input-top d-flex justify-content-between align-item-center">
-                  <div class="d-flex justify-content-between align-item-center w-100">
+                <div
+                  class="input-top d-flex justify-content-between align-item-center"
+                >
+                  <div
+                    class="d-flex justify-content-between align-item-center w-100"
+                  >
                     <label>email</label>
                     <input
                       id="email"
-                      class="p-1"
+                      class="email"
                       type="email"
                       required
                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     />
                   </div>
-                  <span id="spanAfterEmail" class="spanAfter">(*)</span>
+                  <span id="spanEmail" class="spanAfter">(*)</span>
                 </div>
                 <div>
                   <span id="spanEmail"></span>
                 </div>
               </div>
+            </div>
+            <div class="item">
               <div class="inputcol input-password col">
                 <div
                   class="input-top d-flex justify-content-between align-item-center"
@@ -88,36 +92,45 @@
                     <label>password</label>
                     <input
                       id="password"
-                      class="p-1"
+                      class="password"
                       type="password"
                       required
-                      pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,10}$"
+                      pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
                     />
                   </div>
-                  <span id="spanAfterPassword" class="spanAfter">(*)</span>
+                  <span id="spanpassword" class="spanAfter">(*)</span>
                 </div>
                 <div>
                   <span id="spanPassword"></span>
                 </div>
               </div>
-              <div class="inputcol input-confirm col">
+            </div>
+            <div class="item">
+              <div class="inputcol input-password col">
                 <div
                   class="input-top d-flex justify-content-between align-item-center"
                 >
                   <div
-                    class="d-flex justify-content-start align-item-center w-100"
+                    class="d-flex justify-content-between align-item-center w-100"
                   >
                     <label>password confirm</label>
-                    <input id="passwordConfirm" type="password" required />
+                    <input
+                      id="setPassword"
+                      class="password"
+                      type="password"
+                      required
+                    />
                   </div>
-                  <span id="spanAfterConfirm" class="spanAfter">(*)</span>
+                  <span id="spanPassword" class="spanAfter">(*)</span>
                 </div>
                 <div>
-                  <span id="spanConfirm"></span>
+                  <span id="spanSetpassword"></span>
                 </div>
               </div>
             </div>
-            <div class="col col-md-6">
+          </div>
+          <div class="col-6">
+            <div class="item">
               <div class="inputcol input-name col">
                 <div
                   class="input-top d-flex justify-content-between align-item-center"
@@ -131,15 +144,17 @@
                       class="p-1"
                       type="text"
                       required
-                      pattern="[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s]+$"
+                      pattern="[A-Za-z]{1,32}"
                     />
                   </div>
-                  <span id="spanAfterName" class="spanAfter">(*)</span>
+                  <span id="spanname" class="spanAfter">(*)</span>
                 </div>
                 <div>
                   <span id="spanName"></span>
                 </div>
               </div>
+            </div>
+            <div class="item">
               <div class="inputcol input-phone col">
                 <div
                   class="input-top d-flex justify-content-between align-item-center"
@@ -148,20 +163,16 @@
                     class="d-flex justify-content-between align-item-center w-100"
                   >
                     <label>phone</label>
-                    <input
-                      id="phone"
-                      class="p-1"
-                      type="text"
-                      required
-                      pattern="(^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$)"
-                    />
+                    <input id="phone" class="p-1" type="number" required />
                   </div>
-                  <span id="spanAfterPhone" class="spanAfter">(*)</span>
+                  <span id="spanAfterName" class="spanAfter">(*)</span>
                 </div>
                 <div>
                   <span id="spanPhone"></span>
                 </div>
               </div>
+            </div>
+            <div class="item">
               <div id="input-gender" class="inputcol input-gender col">
                 <div
                   id="gender"
@@ -176,14 +187,77 @@
                 <span id="spanGender"></span>
               </div>
               <div class="button-submit col">
-                <button type="button" id="btnSubmit">Submit</button>
+                <button type="button" id="btnSubmit" class="btnSubmit">
+                  Submit
+                </button>
               </div>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     </section>
-
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="item">
+                <h3>GET HELP</h3>
+                <p>Contact us</p>
+                <p>Shopping</p>
+                <p>NIKEID</p>
+                <p>Nike++</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="item">
+                <h3>ORDERS</h3>
+                <p>Payment options</p>
+                <p>Shipping and delivery</p>
+                <p>Returns</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="item">
+                <h3>REGISTER</h3>
+                <p>
+                  Create one account to manage everything you do with Nike, from
+                  your shopping prefrrences to your Nike+ activity.
+                </p>
+                <a class="text-red" href="#">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="item">
+                <h3>EMAIL SIGN UP</h3>
+                <p>Be the first to know about new product and specialoffers.</p>
+                <a class="text-red" href="#">Sign up now</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="item">
+                <h3>GIFT CARDS</h3>
+                <p>Give the gift that always fits.</p>
+                <a class="text-red" href="#">wiew cards</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="item">
+                <h3>REGISTER</h3>
+                <p>Locate a Nike retail store or authorized retailer</p>
+                <a class="text-red" href="#">Search</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
@@ -196,5 +270,19 @@
       integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
       crossorigin="anonymous"
     ></script>
+    <!-- axios -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+      integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="../controllers/register.js"></script>
+    <!-- <script type="module" src="../models/User.js"></script> -->
   </body>
 </html>

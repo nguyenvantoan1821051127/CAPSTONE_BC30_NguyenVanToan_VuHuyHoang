@@ -1,6 +1,5 @@
 @import "../Base/base";
 @import "../Themes/variable";
-
 .header{
     background-color:  #000;
     .container{
@@ -24,17 +23,13 @@
                     width: 31px;         
                 }
                 span{
-                    color: #fff;
-                    font-weight: 300;
-                    font-size: 30px;
                     line-height: 36px;
+                    @include text($fw-3,$fs-mdl,$bg-color-1);
                 }
             }
             a{
                 text-decoration: none;
-                font-size: 16px;
-                font-weight: 300;
-                color: #fff;
+                @include text($fw-3,$fs-sm,$bg-color-1);
                 // line-height: 19px;
                 padding-left: 15px;
             }
@@ -45,54 +40,125 @@
     .container{
         nav{
             margin-left: -60px;
+            padding: 10px 0;
             a{
                 text-decoration: none;
-                font-weight: 300;
-                font-size: 20px;
-                color: #000000;
                 padding-right: 37px;
                 padding-top: 16px;
                 padding-bottom: 10px;
+                @include text($fw-3,$fs-md,$bg-color-3);
             }
             .home{
-                font-weight: 400;
-                font-size: 20px;
-                color: #000000;
-                // border-bottom: 1px solid #000000;
-                // padding-right: -10px;
+                @include text($fw-4,$fs-md,$bg-color-3);
             }
         }
     }
 }
-.Register{
-    
+.register{
     .container{
-        background: $bg-color-4th ;
-        .register-inner{
-            margin: 0 auto;
-            padding: 40px;
-            max-width: 1000px;
-          
-            .title-register{
-                p{
-                    @include text($fw-md,$fs-l,$lh-l);
-                    padding-bottom: 50px;
+        // background: #FC0303;
+        h1{
+            padding-top: 30px;
+            padding-bottom: 70px;
+            text-align: center;
+            @include text($fw-4,$fs-l,$bg-color-3);
+        }
+        .row{
+            .col-6{ 
+                
+                .item{
+                    margin-left: 40px;
+                    .inputcol{
+                        padding-top: 20px;
+                        border-bottom: 5px solid $bg-button-submit;
+                        .input-top{
+                            @include text($fw-4,$fs-mdl,$bg-color-3);
+                            input{
+                                border:none;
+                                width: 50%;
+                            }
+                            span{
+                                @include text($fw-4,$fs-md,$bg-color-12);
+                            }
+                        }
+                    }
+                    .input-gender{
+                        border: none;
+                        .input-top{
+                            input{
+                            }
+                        }
+                    }
+                    .button-submit{
+                        button{
+                            background-color: #ae18e2;
+                            padding: 1px 100px;                   
+                            @include text($fw-4,$fs-mdl,$bg-color-1);
+                            margin-top: 90px;
+                            border: none;
+                        }
+                    }
                 }
             }
-            // form{
-            //     .col{
-            //         .inputcol{
-            //             .input-top{
-            //                 div{
-            //                     input{
-            //                       background: red;
-                                    
-            //                     }
-            //                 }
-            //             }
-            //         }
-            //     }
-            // }
+            
+        }
+    }
+}
+.footer{
+    padding-top: 90px;
+    .footer-top{
+        background: #F8F8F8;
+        .container{
+            .row{
+                display: flex;
+                justify-content: space-around;
+                margin: 0px 100px;
+                padding: 20px 0px;
+                .col{
+                    width: calc(100% /3);
+                    .item{
+                        border-right: 1px solid #000;
+                        h3{
+                            @include text($fw-7,$fs-sm,$bg-color-3);
+                        }
+                        p{
+                            @include text($fw-6,$fs-sn,$bg-color-3);
+                            margin-bottom: 3px;
+                        }
+                        a{
+                            text-decoration: none;
+                            @include text($fw-5,$fs-ss,$bg-color-12);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        background: #DEDDDC;
+        .container{
+            .row{
+                display: flex;
+                justify-content: space-around;
+                margin: 0px 100px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                .col{
+                    .item{
+                        border-right: 1px solid #000;
+                        h3{
+                            @include text($fw-7,$fs-ss,$bg-color-3);
+                        }
+                        p{
+                            @include text($fw-6,$fs-sn,$bg-color-3);
+                        }
+                        a{
+                            text-decoration: none;
+                            @include text($fw-5,$fs-ss,$bg-color-12);
+                        }
+                    }
+                }
+            }
         }
     }
 }
